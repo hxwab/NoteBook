@@ -51,7 +51,6 @@ public class MaxSubarray {
 	/**
 	* 从左到右依次相加，当currSum小于0时，令currSum=0;找出currSum 的最大值
 	*
-	*  
 	*
 	/
 	

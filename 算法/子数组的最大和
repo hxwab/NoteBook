@@ -46,5 +46,34 @@ public class MaxSubarray {
 		}
 		return max;
 	}
+	
+	
+	/**
+	* 从左到右依次相加，当currSum小于0时，令currSum=0;找出currSum 的最大值
+	*
+	*  
+	*
+	/
+	
+	public int getMaxSubArray2(int [] arr){
+		
+		int currSum =0;
+		int max=0;
+		
+		int size =0;
+		while(size<arr.length){
+			
+			currSum+=arr[size++];
+			
+			if(currSum<0){
+				currSum =0;
+			}
+			if(max<currSum){
+				max =currSum;
+			}
+		}
+		return max;
+		return max;
+	}
 
 }

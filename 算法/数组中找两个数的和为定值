@@ -7,6 +7,7 @@ package com.altho;
  例如输入数组1、2、4、7、11、15 和数字15。由于4+11=15，因此输出4 和11。
 
  * 
+ 题目也可以改为数组无序，要求找到两个和为定值的数，复杂度最小O(nlogn)
  */
 public class Find2NumInArray {
 	

@@ -1,0 +1,74 @@
+package com.taop.marchtea;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.Stack;
+import java.util.Vector;
+/**
+ * 
+ * 输入两个整数n和sum，从数列1，2，3.......n 中随意取几个数，使其和等于sum，要求将其中所有的可能组合列出来。
+ * @author win7
+ *
+ */
+
+public class SumOfKNumber {
+	
+	Vector<Integer> v = new Vector<Integer>();
+	Set<Integer> set = new HashSet<Integer>();
+	private  List<Integer> list = new ArrayList<Integer>();
+	Stack<Integer> stack = new Stack<Integer>();
+	public void getKNumber(int n , int sum){
+		
+		if(n<=0||sum<=0){
+			if(!stack.isEmpty())
+			stack.pop();
+			return ;
+		}
+		
+		stack.push(n);
+		
+		if(sum==n){
+			Iterator<Integer> it = stack.iterator();
+			while(it.hasNext()){
+				System.out.print(it.next());
+			}
+			System.out.println("");
+		}
+		
+		
+		getKNumber(n-1, sum-n);
+		getKNumber(n-1, sum);
+		
+	}
+	
+	
+public void getKNumber1(int n , int sum){
+		
+		if(n<=0||sum<=0){
+			if(!list.isEmpty())
+			list.remove(list.size());
+			return ;
+		}
+		
+		list.add(n);
+		
+		
+		if(sum==n){
+			Iterator<Integer> it = list.iterator();
+			while(it.hasNext()){
+				System.out.print(it.next());
+			}
+			System.out.println("");
+		}
+		
+		
+		getKNumber(n-1, sum-n);
+		getKNumber(n-1, sum);
+		
+	}
+	
+
+}

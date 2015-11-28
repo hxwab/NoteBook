@@ -8,6 +8,13 @@ package com.altho;
 
  * 
  题目也可以改为数组无序，要求找到两个和为定值的数，复杂度最小O(nlogn)
+ 
+  如果要排序采用快排法 nlogn
+ 思路：1、排序后使用首尾指针，a[start]+a[end]>num?end--:startt++(等于直接输出)  nlongn +n
+       2、排序后采用二分法查找sum-a[i]  nlogn +n*logn
+       3、（可能是最优思路）： 排序后得到的原始序列：1、 2、 4、 7、11、15     用输入数字15减一下各个数，
+            得到对应的序列为：对应序列：14、13、11、8、4、 0   
+            找到两个数列中相等的元素即可 （头尾指针、hashmap、bitMap）,hashMap的存取与containsKey(复杂度为1）
  */
 public class Find2NumInArray {
 	

@@ -47,6 +47,5 @@ order by orderid
       所以要记住，不要为表中的行假设任何特定的顺序。换句话说，除非你确定要有序行，否则不要指定ORDER BY 子句。排序是需要成本的，SQL Server需要执行有序索引扫描或使用排序运行符。
       
       
-      
   ![](http://files.jb51.net/file_images/article/201211/20121122163335197.png)
       

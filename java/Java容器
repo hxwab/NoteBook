@@ -1,14 +1,15 @@
 Collection
 ├List
-│├LinkedList  (底层是链表实现)
+│├LinkedList (底层是链表实现)
 │├ArrayList （底层为对象数组，容量默认为10，扩容1.5，即每次增长原来的0.5倍）
 │└Vector（底层为对象数组，容量默认为10，可按规定值扩容，默认为每次增长为原来的1倍,线程安全）
-│　└Stack
+│　└Stack（底层为数组）
 ├Set 
 │ ├ hasSet （底层是由hashMap实现的，hashMap 的key存储hasSet的元素，value采用默认静的object）
 │ ├treeSet
 ├Queue
     ├priorityQueue
+
 
 Map
 ├Hashtable(基本同hashMap,只不过hashtable为线程安全的，不允许有null值)
@@ -17,3 +18,5 @@ Map
 └LinkedHashMap
 └TreeMap(底层为红黑树实现，继承自AbstractMap，而AbstractMap又实现了Map接口)
  LSortedMap
+
+

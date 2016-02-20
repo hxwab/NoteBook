@@ -1,0 +1,10 @@
+-XX:+PrintGCDetails  打印垃圾回收信息
+-Xms 为Heap区域的初始值，线上环境需要与-Xmx设置为一致，否则capacity的值会来回飘动
+-Xmx 为Heap区域的最大值
+-Xss（或-ss） 线程栈大小（指一个线程的native空间）1.5以后是1M的默认大小
+-XX:PermSize与-XX:MaxPermSize  方法区（永久代）的初始大小和最大值（但不是本地方法区）
+-XX:NewRatio  老年代与新生代比率
+-XX:SurvivorRatio  Eden与Survivor的占用比例。例如8表示，一个survivor区占用 1/8 的Eden内存，即1/10的新生代内存，为什么不是1/9？因为我们的新生代有2个survivor，即S1和S22。所以survivor总共是占用新生代内存的 2/10，Eden与新生代的占比则为 8/10。
+-XX:MaxHeapFreeRatio  GC后，如果发现空闲堆内存占到整个预估的比例小于这个值，则减小堆空间。
+-XX:MinHeapFreeRatio  GC后，如果发现空闲堆内存占到整个预估的比例大于这个值，则增大堆空间。
+-XX:NewSize    新生代大小
